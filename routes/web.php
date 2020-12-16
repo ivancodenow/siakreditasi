@@ -23,3 +23,23 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::resource('todo', TodoController::class)->middleware('auth:sanctum');
+
+Route::get('akreditasi/periode', function () {
+    return view('akreditasi/index');
+});
+
+Route::get('akreditasi/pengisian_akreditasi', function () {
+    return 'halaman pengisian akreditasi';
+});
+
+Route::get('akreditasi/pengisian_evaluasi_diri', function () {
+    return 'halaman pengisian evaluasi diri';
+});
+
+Route::get('akreditasi/simulasi_penilaian', function () {
+    return 'halaman simulasi penilaian';
+});
+
+Route::get('akreditasi/hasil_penilaian', function () {
+    return 'halaman hasil penilaian';
+});
